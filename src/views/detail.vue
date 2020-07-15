@@ -767,17 +767,89 @@ export default {
         skills: this.userdetails.skills,
         achievements: this.userdetails.achievements
       };
-      // jsonToText(userdetails);
-      console.log("length of skill" + userdetails.skills.length);
-      // for (i = 0; i < userdetails.skills.length; i++) {
-      //   input = userdetails.skills[i].skill;
-      // }
-      // var i;
-      // userdetails.skills.forEach(function(skill) {
-      //   console.log(skill.skill);
-      //   input = skill.skill;
-      //   return input;
-      // });
+
+      // json2md.converters.userdetails_education = function() {
+      //         var  j;
+      //         var education = [];
+
+      //         var education = [];
+      //         for (j = 0; j < project.length; j++) {
+      //           projectfinal.push(
+      //             "Project Name : " +
+      //               project[j].project +
+      //               "\n Project Description : " +
+      //               project[j].description +
+      //               "\n From : " +
+      //               project[j].from +
+      //               "\n to :" +
+      //               project[j].to +
+      //               "\n Github Link :" +
+      //               project[j].gitlink +
+      //               "\n" +
+      //               "\n Website Link :" +
+      //               project[j].weblink +
+      //               "\n"
+      //           );
+      //         }
+      //         return projectfinal;
+      //       };
+
+      json2md.converters.userdetails_projects = function() {
+        var i, j;
+        var project = [];
+
+        for (i = 0; i < userdetails.projects.length; i++) {
+          project.push(userdetails.projects[i]);
+        }
+
+        var projectfinal = [];
+        for (j = 0; j < project.length; j++) {
+          projectfinal.push(
+            "Project Name : " +
+              project[j].project +
+              "\n Project Description : " +
+              project[j].description +
+              "\n From : " +
+              project[j].from +
+              "\n to :" +
+              project[j].to +
+              "\n Github Link :" +
+              project[j].gitlink +
+              "\n" +
+              "\n Website Link :" +
+              project[j].weblink +
+              "\n"
+          );
+        }
+        return projectfinal;
+      };
+
+      json2md.converters.userdetails_works = function() {
+        var i, j;
+        var work = [];
+        console.log(userdetails.works.length);
+        for (i = 0; i < userdetails.works.length; i++) {
+          work.push(userdetails.works[i]);
+        }
+
+        var workfinal = [];
+        for (j = 0; j < work.length; j++) {
+          workfinal.push(
+            "Company Name : " +
+              work[j].company +
+              "\n Work Role : " +
+              work[j].role +
+              "\n From : " +
+              work[j].from +
+              "\n to :" +
+              work[j].to +
+              "\n Details :" +
+              work[j].details +
+              "\n"
+          );
+        }
+        return workfinal;
+      };
 
       json2md.converters.userdetails_skills = function() {
         var i;
@@ -788,13 +860,26 @@ export default {
         }
         return skill;
       };
-      // }
+      json2md.converters.userdetails_achievements = function() {
+        var i;
+        var achievement = [];
+        for (i = 0; i < userdetails.achievements.length; i++) {
+          achievement.push(userdetails.achievements[i].achievement);
+        }
+        return achievement;
+      };
       console.log(
         json2md([
           { h1: "JSON To Markdown" },
           { blockquote: "A JSON to Markdown converter." },
           {
-            userdetails_skills: "" //placeholder for input
+            userdetails_skills: ""
+          },
+          {
+            userdetails_achievements: ""
+          },
+          {
+            userdetails_works: ""
           },
           {
             img: [
@@ -830,10 +915,6 @@ export default {
           }
         ])
       );
-
-      // console.log(JSON.stringify(userdetails));
-
-      // console.log(userdetails);
     },
     addNewProject() {
       this.userdetails.projects.push({
@@ -879,30 +960,4 @@ export default {
     }
   }
 };
-
-// function jsonToText(json) {
-//   var text = "";
-//   if (typeof json == "object") {
-//     if (json instanceof Array) {
-//       for (var key in json) {
-//         text += jsonToText(json[key]);
-//       }
-//     } else {
-//       for (key in json) {
-//         var val = json[key];
-//         if (typeof val == "object") {
-//           text += key + "\n" + jsonToText(val);
-//         } else {
-//           text += key + " " + jsonToText(val);
-//         }
-//       }
-//     }
-//   } else {
-//     text += json.toString() + "\n";
-//   }
-//   // console.log(text);
-//   const json2md = require("json2md");
-//   console.log(json2md([{ h2: text }]));
-//   return text;
-// }
 </script>
