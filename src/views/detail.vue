@@ -801,34 +801,29 @@ export default {
           projectfinal.join(" ");
           projectfinal.push(
             "\n" +
-              "-" +
+              "<li>" +
               " <h4>Project Name : " +
               project[j].project +
               "</h4> \n" +
-              "   " +
               "<h4> Project Description : " +
               project[j].description +
               "</h4> \n" +
-              "   " +
               "<h4>  From : " +
               project[j].from +
               "</h4> \n " +
-              "   " +
               "<h4>  to :" +
               project[j].to +
               "</h4> \n" +
-              "   " +
               "<h4>  Github Link :" +
               project[j].gitlink +
               "</h4> \n" +
-              "   " +
               "<h4>  Website Link :" +
               project[j].weblink +
               "</h4> \n" +
-              " "
+              " </li>"
           );
         }
-        return projectfinal;
+        return "<ul>" + projectfinal + "</ul>";
       };
 
       json2md.converters.userdetails_works = function() {
@@ -843,20 +838,26 @@ export default {
         for (j = 0; j < work.length; j++) {
           workfinal.push(
             "\n" +
-              "Company Name : " +
+              "<li>" +
+              "<h4> Company Name : " +
               work[j].company +
-              "\n Work Role : " +
+              " </h4> \n " +
+              " <h4> Work Role : " +
               work[j].role +
-              "\n From : " +
+              "</h4> \n " +
+              " <h4> From : " +
               work[j].from +
-              "\n to :" +
+              " </h4> \n  " +
+              "<h4> to :" +
               work[j].to +
-              "\n Details :" +
+              " </h4> \n " +
+              " <h4> Details :" +
               work[j].details +
-              "\n"
+              " </h4> \n" +
+              "</li>"
           );
         }
-        return workfinal;
+        return "<ul>" + workfinal + "</ul>";
       };
 
       json2md.converters.userdetails_skills = function() {
@@ -866,76 +867,93 @@ export default {
           console.log(userdetails.skills[i].skill);
           skill.push(userdetails.skills[i].skill);
         }
-        // skill.join("");
-        return skill;
+
+        return "<h4>" + skill + "</h4>";
       };
       json2md.converters.userdetails_achievements = function() {
         var i;
         var achievement = [];
         for (i = 0; i < userdetails.achievements.length; i++) {
-          achievement.push(userdetails.achievements[i].achievement);
+          achievement.push(
+            "<li>" + userdetails.achievements[i].achievement + "</li>"
+          );
         }
-        return achievement;
+
+        var achv_f = achievement.join(" ");
+
+        return "<ul>" + achv_f + "</ul>";
       };
       console.log(
         json2md([
           {
+            h3: "Hi there!"
+          },
+          {
             p:
               "<a href=" +
               userdetails.facebook +
+              " " +
               '> <img align="left" src="https://img.icons8.com/color/48/000000/facebook.png"></img></a>'
           },
-
-          { h1: "Hello Know me better" },
-
           {
-            h4: "Name:" + userdetails.fullname
+            p:
+              "<a href=" +
+              userdetails.linkdin +
+              " " +
+              '> <img align="left" src="https://img.icons8.com/color/48/000000/linkedin.png"></img></a>'
           },
           {
-            h4: "Position:" + userdetails.title
+            p:
+              "<a href=" +
+              userdetails.twitter +
+              " " +
+              '> <img align="left" src="https://img.icons8.com/color/48/000000/twitter.png"></img></a>'
           },
           {
-            h4: "Email:" + userdetails.email
+            p:
+              "<a href=" +
+              userdetails.github +
+              " " +
+              '> <img align="left" src="https://img.icons8.com/color/48/000000/github--v1.png"></img></a>'
           },
           {
-            h4: "About Myself:" + userdetails.about
+            p:
+              "<a href=" +
+              userdetails.instagram +
+              " " +
+              '> <img align="left" src="https://img.icons8.com/color/48/000000/instagram-new.png"></img></a>'
           },
 
           {
-            link: [
-              {
-                title: "Github",
-                source: userdetails.github
-              },
-              {
-                title: "Linkedin",
-                source: userdetails.linkedin
-              },
-              {
-                title: "Facebook",
-                source: userdetails.facebook
-              },
-              {
-                title: "Instagram",
-                source: userdetails.instagram
-              },
-
-              {
-                title: "Blog",
-                source: userdetails.blog
-              },
-
-              {
-                title: "Twitter",
-                source: userdetails.twitter
-              },
-
-              {
-                title: "Other",
-                source: userdetails.other
-              }
-            ]
+            p:
+              "<a href=" +
+              userdetails.blog +
+              " " +
+              '> <img align="left" src="https://img.icons8.com/color/48/000000/medium-logo.png"></img></a>'
           },
+          {
+            p:
+              "<a href=" +
+              userdetails.other +
+              " " +
+              '> <img align="left" src="https://img.icons8.com/color/48/000000/shrug-emoticon.png"></img></a>'
+          },
+
+          { h4: "Let's Connect" },
+
+          {
+            h4: "Name: " + userdetails.fullname
+          },
+          {
+            h4: "Position: " + userdetails.title
+          },
+          {
+            h4: "Email: " + userdetails.email
+          },
+          {
+            h4: "<h4>About Myself: " + userdetails.about + "</h4>"
+          },
+
           {
             ul: [
               "<h1>Education</h1>",
@@ -951,6 +969,9 @@ export default {
             ]
           },
           {
+            h1: "Work Experience"
+          },
+          {
             userdetails_works: ""
           },
           {
@@ -960,7 +981,13 @@ export default {
             userdetails_projects: ""
           },
           {
+            h1: "Skills"
+          },
+          {
             userdetails_skills: ""
+          },
+          {
+            h1: "Achievements"
           },
           {
             userdetails_achievements: ""
