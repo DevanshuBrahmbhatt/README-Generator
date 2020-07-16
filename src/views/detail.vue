@@ -4,7 +4,7 @@
       <v-container>
         <div
           class="display-2 font-weight-medium"
-          style="color:#d2d2d2!important;"
+          style="color:#ffffff!important;"
         >Please add your details here</div>
         <v-divider class="mx-4" dark></v-divider>
         <v-divider class="mx-4" dark></v-divider>
@@ -14,7 +14,7 @@
 
         <div
           class="display-1 font-weight-medium"
-          style="color:#d2d2d2!important;"
+          style="color:#ffffff!important;"
         >1. Personal Details</div>
         <v-divider class="mx-4" dark></v-divider>
         <br />
@@ -28,10 +28,10 @@
               type="text"
               id="fullname"
               required
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -44,10 +44,10 @@
               type="text"
               required
               id="tagline"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -60,10 +60,10 @@
               type="text"
               required
               id="email"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -76,10 +76,10 @@
               type="text"
               id="about"
               required
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -91,10 +91,10 @@
               name="github"
               type="text"
               id="github"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -106,10 +106,10 @@
               name="linkdin"
               type="text"
               id="linkdin"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -121,10 +121,10 @@
               name="facebook"
               type="text"
               id="facebook"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -136,10 +136,10 @@
               name="instagram"
               type="text"
               id="instagram"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -151,10 +151,10 @@
               name="blog"
               type="text"
               id="blog"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -165,10 +165,10 @@
               name="twitter"
               type="text"
               id="twitter"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -180,20 +180,20 @@
               name="Other"
               type="text"
               id="other"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
 
             <br />
-            <div class="display-1 font-weight-medium" style="color:#d2d2d2!important;">
+            <div class="display-1 font-weight-medium" style="color:#ffffff!important;">
               2. Add Your Projects
               <v-btn
                 @click="addNewProject"
-                style="cursor:pointer; color:#191919"
+                style="cursor:pointer; color:#24292e"
                 class="subtitle-2 ml-auto"
               >Add Project</v-btn>
             </div>
@@ -207,14 +207,14 @@
                 <v-col lg="6" md="6" sm="6">
                   <div
                     class="headline font-weight-medium"
-                    style="color:#d2d2d2!important;"
+                    style="color:#ffffff!important;"
                   >{{i+1}}. Projects</div>
                 </v-col>
 
                 <v-col lg="6" md="6">
                   <v-btn
                     @click="deleteProject(i)"
-                    style="cursor:pointer; color:#191919"
+                    style="cursor:pointer; color:#24292e"
                     class="subtitle-2 float-right"
                   >Cancel</v-btn>
                 </v-col>
@@ -227,10 +227,10 @@
                 type="text"
                 id="project"
                 v-model="project.project"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
@@ -244,10 +244,10 @@
                         label="Start Month"
                         :value="project.from"
                         v-on="on"
-                        style="color:#d2d2d2!important;"
-                        background-color="#191919"
+                        style="color:#ffffff!important;"
+                        background-color="#24292e"
                         outlined
-                        color="#d2d2d2"
+                        color="#ffffff"
                         class="title"
                         dark
                       ></v-text-field>
@@ -266,10 +266,10 @@
                         label="End Month"
                         :value="project.to"
                         v-on="on"
-                        style="color:#d2d2d2!important;"
-                        background-color="#191919"
+                        style="color:#ffffff!important;"
+                        background-color="#24292e"
                         outlined
-                        color="#d2d2d2"
+                        color="#ffffff"
                         class="title"
                         dark
                       ></v-text-field>
@@ -280,8 +280,8 @@
 
                 <v-col cols="3" sm="1">
                   <v-checkbox
-                    style="color:#d2d2d2!important;"
-                    background-color="#191919"
+                    style="color:#ffffff!important;"
+                    background-color="#24292e"
                     dark
                     class="float-right"
                     v-model="project.to"
@@ -297,10 +297,10 @@
                 type="text"
                 id="description"
                 v-model="project.description"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
@@ -312,10 +312,10 @@
                 type="text"
                 id="gitlink"
                 v-model="project.gitlink"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
@@ -327,21 +327,21 @@
                 type="text"
                 id="weblink"
                 v-model="project.weblink"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
             </v-col>
             <br />
 
-            <div class="display-1 font-weight-medium" style="color:#d2d2d2!important;">
+            <div class="display-1 font-weight-medium" style="color:#ffffff!important;">
               3. Add Your Work Experience
               <v-btn
                 @click="addNewwork"
-                style="cursor:pointer; color:#191919"
+                style="cursor:pointer; color:#24292e"
                 class="subtitle-2 ml-auto"
               >Add Work</v-btn>
             </div>
@@ -354,14 +354,14 @@
                 <v-col lg="6" md="6" sm="6">
                   <div
                     class="headline font-weight-medium"
-                    style="color:#d2d2d2!important;"
+                    style="color:#ffffff!important;"
                   >{{i+1}}. Work Experience</div>
                 </v-col>
 
                 <v-col lg="6" md="6">
                   <v-btn
                     @click="deleteWork(i)"
-                    style="cursor:pointer; color:#191919"
+                    style="cursor:pointer; color:#24292e"
                     class="subtitle-2 float-right"
                   >Cancel</v-btn>
                 </v-col>
@@ -375,10 +375,10 @@
                 type="text"
                 id="company"
                 v-model="work.company"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
@@ -390,10 +390,10 @@
                 type="text"
                 id="role"
                 v-model="work.role"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
@@ -407,10 +407,10 @@
                         label="Start Month"
                         :value="work.from"
                         v-on="on"
-                        style="color:#d2d2d2!important;"
-                        background-color="#191919"
+                        style="color:#ffffff!important;"
+                        background-color="#24292e"
                         outlined
-                        color="#d2d2d2"
+                        color="#ffffff"
                         class="title"
                         dark
                       ></v-text-field>
@@ -430,10 +430,10 @@
                         label="End Month"
                         :value="work.to"
                         v-on="on"
-                        style="color:#d2d2d2!important;"
-                        background-color="#191919"
+                        style="color:#ffffff!important;"
+                        background-color="#24292e"
                         outlined
-                        color="#d2d2d2"
+                        color="#ffffff"
                         class="title"
                         dark
                       ></v-text-field>
@@ -445,8 +445,8 @@
 
                 <v-col cols="3" sm="1">
                   <v-checkbox
-                    style="color:#d2d2d2!important;"
-                    background-color="#191919"
+                    style="color:#ffffff!important;"
+                    background-color="#24292e"
                     dark
                     class="float-right"
                     v-model="work.to"
@@ -463,10 +463,10 @@
                 type="text"
                 id="describework"
                 v-model="work.details"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
@@ -475,7 +475,7 @@
             <br />
             <div
               class="display-1 font-weight-medium"
-              style="color:#d2d2d2!important;"
+              style="color:#ffffff!important;"
             >4. Add Your Education</div>
             <v-divider class="mx-4" dark></v-divider>
             <br />
@@ -487,10 +487,10 @@
               type="text"
               id="college"
               v-model="userdetails.education.college"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -502,10 +502,10 @@
               type="text"
               id="degree"
               v-model="userdetails.education.degree"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
@@ -519,10 +519,10 @@
                       label="Join Month"
                       :value="userdetails.education.from"
                       v-on="on"
-                      style="color:#d2d2d2!important;"
-                      background-color="#191919"
+                      style="color:#ffffff!important;"
+                      background-color="#24292e"
                       outlined
-                      color="#d2d2d2"
+                      color="#ffffff"
                       class="title"
                       dark
                     ></v-text-field>
@@ -542,10 +542,10 @@
                       label="End Month"
                       :value="userdetails.education.to"
                       v-on="on"
-                      style="color:#d2d2d2!important;"
-                      background-color="#191919"
+                      style="color:#ffffff!important;"
+                      background-color="#24292e"
                       outlined
-                      color="#d2d2d2"
+                      color="#ffffff"
                       class="title"
                       dark
                     ></v-text-field>
@@ -563,20 +563,20 @@
               type="text"
               id="aboutuniversity"
               v-model="userdetails.education.about"
-              style="color:#d2d2d2!important;"
-              background-color="#191919"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
               outlined
-              color="#d2d2d2"
+              color="#ffffff"
               class="title"
               dark
             />
 
             <br />
-            <div class="display-1 font-weight-medium" style="color:#d2d2d2!important;">
+            <div class="display-1 font-weight-medium" style="color:#ffffff!important;">
               5. Add Your Skills
               <v-btn
                 @click="addNewskill"
-                style="cursor:pointer; color:#191919"
+                style="cursor:pointer; color:#24292e"
                 class="subtitle-2 ml-auto"
               >Add More</v-btn>
             </div>
@@ -588,14 +588,14 @@
                 <v-col lg="6" md="6" sm="6">
                   <div
                     class="headline font-weight-medium"
-                    style="color:#d2d2d2!important;"
+                    style="color:#ffffff!important;"
                   >{{i+1}}. Skill</div>
                 </v-col>
 
                 <v-col lg="6" md="6">
                   <v-btn
                     @click="deleteSkill(i)"
-                    style="cursor:pointer; color:#191919"
+                    style="cursor:pointer; color:#24292e"
                     class="subtitle-2 float-right"
                   >Cancel</v-btn>
                 </v-col>
@@ -609,19 +609,19 @@
                 type="text"
                 id="skill"
                 v-model="skill.skill"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
             </v-col>
-            <div class="display-1 font-weight-medium" style="color:#d2d2d2!important;">
+            <div class="display-1 font-weight-medium" style="color:#ffffff!important;">
               6. Add Your Achievements
               <v-btn
                 @click="addNewachievements"
-                style="cursor:pointer; color:#191919"
+                style="cursor:pointer; color:#24292e"
                 class="subtitle-2 ml-auto"
               >Add More</v-btn>
               <br />
@@ -635,14 +635,14 @@
                 <v-col lg="6" md="6" sm="6">
                   <div
                     class="headline font-weight-medium"
-                    style="color:#d2d2d2!important;"
+                    style="color:#ffffff!important;"
                   >{{i+1}}. Achievement</div>
                 </v-col>
 
                 <v-col lg="6" md="6">
                   <v-btn
                     @click="deleteAchievement(i)"
-                    style="cursor:pointer; color:#191919"
+                    style="cursor:pointer; color:#24292e"
                     class="subtitle-2 float-right"
                   >Cancel</v-btn>
                 </v-col>
@@ -656,17 +656,17 @@
                 type="text"
                 id="achievement"
                 v-model="achievement.achievement"
-                style="color:#d2d2d2!important;"
-                background-color="#191919"
+                style="color:#ffffff!important;"
+                background-color="#24292e"
                 outlined
-                color="#d2d2d2"
+                color="#ffffff"
                 class="title"
                 dark
               />
             </v-col>
 
             <v-btn
-              color="#d2d2d2"
+              color="#ffffff"
               class="subtitle-1"
               id="submit"
               name="submit"
@@ -768,31 +768,25 @@ export default {
         achievements: this.userdetails.achievements
       };
 
-      // json2md.converters.userdetails_education = function() {
-      //         var  j;
-      //         var education = [];
+      // json2md.converters.userdetails_edu = function() {
+      //   var edu = [];
 
-      //         var education = [];
-      //         for (j = 0; j < project.length; j++) {
-      //           projectfinal.push(
-      //             "Project Name : " +
-      //               project[j].project +
-      //               "\n Project Description : " +
-      //               project[j].description +
-      //               "\n From : " +
-      //               project[j].from +
-      //               "\n to :" +
-      //               project[j].to +
-      //               "\n Github Link :" +
-      //               project[j].gitlink +
-      //               "\n" +
-      //               "\n Website Link :" +
-      //               project[j].weblink +
-      //               "\n"
-      //           );
-      //         }
-      //         return projectfinal;
-      //       };
+      //   edu.push(
+      //     "College Name : " +
+      //       userdetails.education.college +
+      //       "\n Degree name: " +
+      //       userdetails.education.degree +
+      //       "\n From : " +
+      //       userdetails.education.from +
+      //       "\n to :" +
+      //       userdetails.education.to +
+      //       "\n About Your University :" +
+      //       userdetails.education.about +
+      //       "\n"
+      //   );
+
+      //   return edu;
+      // };
 
       json2md.converters.userdetails_projects = function() {
         var i, j;
@@ -805,20 +799,25 @@ export default {
         var projectfinal = [];
         for (j = 0; j < project.length; j++) {
           projectfinal.push(
-            "Project Name : " +
+            "\n" +
+              " <h4>Project Name : " +
               project[j].project +
-              "\n Project Description : " +
+              "</h4> \n" +
+              "<h4>Project Description : " +
               project[j].description +
-              "\n From : " +
+              "</h4> \n" +
+              "<h4> From : " +
               project[j].from +
-              "\n to :" +
+              "</h4> \n " +
+              "<h4> to :" +
               project[j].to +
-              "\n Github Link :" +
+              "</h4> \n" +
+              "<h4> Github Link :" +
               project[j].gitlink +
-              "\n" +
-              "\n Website Link :" +
+              "</h4> \n" +
+              "<h4> Website Link :" +
               project[j].weblink +
-              "\n"
+              "</h4> \n"
           );
         }
         return projectfinal;
@@ -870,48 +869,80 @@ export default {
       };
       console.log(
         json2md([
-          { h1: "JSON To Markdown" },
-          { blockquote: "A JSON to Markdown converter." },
+          { h1: "Hello Know me better" },
+
           {
-            userdetails_skills: ""
+            h4: "Name:" + userdetails.fullname
           },
           {
-            userdetails_achievements: ""
+            h4: "Position:" + userdetails.title
+          },
+          {
+            h4: "Email:" + userdetails.email
+          },
+          {
+            h4: "About Myself:" + userdetails.about
+          },
+          {
+            link: [
+              {
+                title: "Github",
+                source: userdetails.github
+              },
+              {
+                title: "Linkedin",
+                source: userdetails.linkedin
+              },
+              {
+                title: "Facebook",
+                source: userdetails.facebook
+              },
+              {
+                title: "Instagram",
+                source: userdetails.instagram
+              },
+
+              {
+                title: "Blog",
+                source: userdetails.blog
+              },
+
+              {
+                title: "Twitter",
+                source: userdetails.twitter
+              },
+
+              {
+                title: "Other",
+                source: userdetails.other
+              }
+            ]
+          },
+          {
+            ul: [
+              "<h1>Education</h1>",
+              [
+                "<h4>College Name: " +
+                  userdetails.education.college +
+                  "</h4>\n",
+                "<h4>Degree: " + userdetails.education.degree + "</h4>\n",
+                "<h4>From:" + userdetails.education.from + "</h4>\n",
+                "<h4>To: " + userdetails.education.to + "</h4>\n",
+                "<h4>About College: " + userdetails.education.about + "</h4>"
+              ]
+            ]
           },
           {
             userdetails_works: ""
           },
           {
-            img: [
-              {
-                title: "Some image",
-                source: "https://example.com/some-image.png"
-              },
-              {
-                title: "Another image",
-                source: "https://example.com/some-image1.png"
-              },
-              {
-                title: "Yet another image",
-                source: "https://example.com/some-image2.png"
-              }
-            ]
+            userdetails_projects: ""
           },
-          { h2: "Features" },
           {
-            ul: [
-              "Easy to use",
-              "You can programatically generate Markdown content",
-              "..."
-            ]
+            userdetails_skills: ""
           },
-          { h2: "How to contribute" },
           {
-            ol: [
-              "Fork the project",
-              "Create your branch",
-              "Raise a pull request"
-            ]
+            userdetails_achievements: ""
           }
         ])
       );

@@ -45,8 +45,8 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  font-family: "Space Mono", monospace;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
-  background: #191919;
+  background: #2b3137;
 }
 </style>
