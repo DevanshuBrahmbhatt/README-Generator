@@ -798,26 +798,34 @@ export default {
 
         var projectfinal = [];
         for (j = 0; j < project.length; j++) {
+          projectfinal.join(" ");
           projectfinal.push(
             "\n" +
+              "-" +
               " <h4>Project Name : " +
               project[j].project +
               "</h4> \n" +
-              "<h4>Project Description : " +
+              "   " +
+              "<h4> Project Description : " +
               project[j].description +
               "</h4> \n" +
-              "<h4> From : " +
+              "   " +
+              "<h4>  From : " +
               project[j].from +
               "</h4> \n " +
-              "<h4> to :" +
+              "   " +
+              "<h4>  to :" +
               project[j].to +
               "</h4> \n" +
-              "<h4> Github Link :" +
+              "   " +
+              "<h4>  Github Link :" +
               project[j].gitlink +
               "</h4> \n" +
-              "<h4> Website Link :" +
+              "   " +
+              "<h4>  Website Link :" +
               project[j].weblink +
-              "</h4> \n"
+              "</h4> \n" +
+              " "
           );
         }
         return projectfinal;
@@ -834,7 +842,8 @@ export default {
         var workfinal = [];
         for (j = 0; j < work.length; j++) {
           workfinal.push(
-            "Company Name : " +
+            "\n" +
+              "Company Name : " +
               work[j].company +
               "\n Work Role : " +
               work[j].role +
@@ -857,6 +866,7 @@ export default {
           console.log(userdetails.skills[i].skill);
           skill.push(userdetails.skills[i].skill);
         }
+        // skill.join("");
         return skill;
       };
       json2md.converters.userdetails_achievements = function() {
@@ -934,6 +944,9 @@ export default {
           },
           {
             userdetails_works: ""
+          },
+          {
+            h1: "Projects"
           },
           {
             userdetails_projects: ""
