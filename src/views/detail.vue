@@ -823,7 +823,8 @@ export default {
               " </li>"
           );
         }
-        return "<ul>" + projectfinal + "</ul>";
+        var project_f = projectfinal.join(" ");
+        return "<ul>" + project_f + "</ul>";
       };
 
       json2md.converters.userdetails_works = function() {
@@ -857,7 +858,8 @@ export default {
               "</li>"
           );
         }
-        return "<ul>" + workfinal + "</ul>";
+        var work_f = workfinal.join(" ");
+        return "<ul>" + work_f + "</ul>";
       };
 
       json2md.converters.userdetails_skills = function() {
