@@ -879,6 +879,13 @@ export default {
       };
       console.log(
         json2md([
+          {
+            p:
+              "<a href=" +
+              userdetails.facebook +
+              '> <img align="left" src="https://img.icons8.com/color/48/000000/facebook.png"></img></a>'
+          },
+
           { h1: "Hello Know me better" },
 
           {
@@ -893,6 +900,7 @@ export default {
           {
             h4: "About Myself:" + userdetails.about
           },
+
           {
             link: [
               {
