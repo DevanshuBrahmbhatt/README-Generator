@@ -995,7 +995,7 @@ export default {
             ")"
         },
         {
-          link: { title: "Developed By Devanshu ♥️", source: "gitread.md" }
+          link: { title: "Developed By Devanshu ♥️", source: "gitread.me" }
         }
       ]);
 
