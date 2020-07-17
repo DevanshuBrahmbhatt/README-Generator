@@ -2,9 +2,9 @@
   <v-app>
     <v-app-bar app dark>
       <div class="d-flex align-center">
-        <!-- <v-btn href="/" text> -->
-        <div class="headline">Readme Generator</div>
-        <!-- </v-btn> -->
+        <v-btn href="/" text>
+          <div class="headline">gitread.me</div>
+        </v-btn>
       </div>
 
       <v-spacer></v-spacer>

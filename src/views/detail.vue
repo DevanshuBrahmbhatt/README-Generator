@@ -100,6 +100,21 @@
             />
 
             <v-text-field
+              label="git Username "
+              v-model="userdetails.gitusername"
+              placeholder="github username"
+              name="gitusername"
+              type="text"
+              id="github"
+              style="color:#ffffff!important;"
+              background-color="#24292e"
+              outlined
+              color="#ffffff"
+              class="title"
+              dark
+            />
+
+            <v-text-field
               label="linkedin"
               v-model="userdetails.linkedin"
               placeholder="linkedin link"
@@ -755,6 +770,7 @@ export default {
         email: this.userdetails.email,
         about: this.userdetails.about,
         github: this.userdetails.github,
+        gitusername: this.userdetails.gitusername,
         linkedin: this.userdetails.linkedin,
         facebook: this.userdetails.facebook,
         instagram: this.userdetails.instagram,
@@ -973,10 +989,15 @@ export default {
           userdetails_achievements: ""
         },
         {
+          p:
+            "![YOUR github stats](https://github-readme-stats.vercel.app/api?username=" +
+            userdetails.gitusername +
+            ")"
+        },
+        {
           link: { title: "Developed By Devanshu ♥️", source: "gitread.md" }
         }
       ]);
-      console.log(details);
 
       var filename = "README.md";
 
