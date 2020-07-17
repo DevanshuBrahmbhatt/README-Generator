@@ -2,22 +2,30 @@
   <v-app>
     <v-container>
       <v-row>
-        <v-banner class="indigo white" two-line>
-          <div class="white--text">
-            <div class="display-1">We are DSC (Developer Student Club)</div>
+        <v-col>
+          <v-banner two-line>
+            <div class="white--text">
+              <div class="display-1">How it will help you!!</div>
+              <h5 class="text-justify">1. Click on "Insert Your Detail Button".</h5>
+              <h5 class="text-justify">2. Enter Your Details.</h5>
+              <h5 class="text-justify">3. Then You will have your README.md file.</h5>
+              <h5 class="text-justify">4. As Markdown so can edit further as well.</h5>
+            </div>
+            <h4
+              class="white--text"
+            >The Motto Of this application is to give good template for your README.md</h4>
+          </v-banner>
+        </v-col>
 
-            <p class="subtitle-1 text-justify">
-              Three line text string example
-              with two actions. One to two lines is preferable. Three
-              lines should be considered the maximum string length on
-              with two actions. One to two lines is preferable. Three
-              lines should be considered the maximum string length on
-              with two actions. One to two lines is preferable. Three
-              lines should be considered the maximum string length on
-              desktop in order to keep messages short and actionable.
-            </p>
-          </div>
-        </v-banner>
+        <v-col>
+          <v-img
+            src="../assets/1.png"
+            aspect-ratio="1"
+            max-width="500"
+            max-height="500"
+            class="grey lighten-2"
+          ></v-img>
+        </v-col>
       </v-row>
       <div class="my-2 text-center">
         <v-btn x-large color="white" class="black--text" to="/detail" dark>Insert Your Detail</v-btn>

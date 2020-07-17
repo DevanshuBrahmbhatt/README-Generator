@@ -100,12 +100,12 @@
             />
 
             <v-text-field
-              label="linkdin"
-              v-model="userdetails.linkdin"
-              placeholder="linkdin link"
-              name="linkdin"
+              label="linkedin"
+              v-model="userdetails.linkedin"
+              placeholder="linkedin link"
+              name="linkedin"
               type="text"
-              id="linkdin"
+              id="linkedin"
               style="color:#ffffff!important;"
               background-color="#24292e"
               outlined
@@ -700,13 +700,13 @@ export default {
         title: "",
         username: "",
         about: "",
-        github: "",
-        linkdin: "",
-        facebook: "",
-        instagram: "",
-        other: "",
-        blog: "",
-        twitter: "",
+        github: "https://github.com/",
+        linkedin: "http://linkedin.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        other: "Anything",
+        blog: "https://medium.com/",
+        twitter: "https://twitter.com/",
         works: [
           {
             company: "",
@@ -749,16 +749,13 @@ export default {
   methods: {
     submitDetails: function() {
       const json2md = require("json2md");
-
-      // var FileSaver = require("file-saver");
-
       var userdetails = {
         fullname: this.userdetails.fullname,
         title: this.userdetails.title,
         email: this.userdetails.email,
         about: this.userdetails.about,
         github: this.userdetails.github,
-        linkdin: this.userdetails.linkdin,
+        linkedin: this.userdetails.linkedin,
         facebook: this.userdetails.facebook,
         instagram: this.userdetails.instagram,
         other: this.userdetails.other,
@@ -770,26 +767,6 @@ export default {
         skills: this.userdetails.skills,
         achievements: this.userdetails.achievements
       };
-
-      // json2md.converters.userdetails_edu = function() {
-      //   var edu = [];
-
-      //   edu.push(
-      //     "College Name : " +
-      //       userdetails.education.college +
-      //       "\n Degree name: " +
-      //       userdetails.education.degree +
-      //       "\n From : " +
-      //       userdetails.education.from +
-      //       "\n to :" +
-      //       userdetails.education.to +
-      //       "\n About Your University :" +
-      //       userdetails.education.about +
-      //       "\n"
-      //   );
-
-      //   return edu;
-      // };
 
       json2md.converters.userdetails_projects = function() {
         var i, j;
@@ -897,13 +874,12 @@ export default {
           p:
             "<a href=" +
             userdetails.facebook +
-            "<p>' '</p> " +
             '> <img align="left" src="https://img.icons8.com/color/48/000000/facebook-new.png"></img></a>'
         },
         {
           p:
             "<a href=" +
-            userdetails.linkdin +
+            userdetails.linkedin +
             " " +
             '> <img align="left" src="https://img.icons8.com/color/48/000000/linkedin.png"></img></a>'
         },
@@ -944,10 +920,10 @@ export default {
             '> <img align="left" src="https://img.icons8.com/color/48/000000/shrug-emoticon.png"></img></a>'
         },
 
-        { h4: "Let's Connect" },
+        { h4: "Let's Connect<br>" },
 
         {
-          h4: "Name: " + userdetails.fullname
+          h4: "<br>Name: " + userdetails.fullname
         },
         {
           h4: "Position: " + userdetails.title
@@ -994,6 +970,9 @@ export default {
         },
         {
           userdetails_achievements: ""
+        },
+        {
+          link: { title: "Developed By Devanshu ♥️", source: "link" }
         }
       ]);
       console.log(details);
