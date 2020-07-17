@@ -684,6 +684,7 @@
 </template>
 
 <script>
+import { saveAs } from "file-saver";
 export default {
   mounted() {},
   components: {},
@@ -748,6 +749,8 @@ export default {
   methods: {
     submitDetails: function() {
       const json2md = require("json2md");
+
+      // var FileSaver = require("file-saver");
 
       var userdetails = {
         fullname: this.userdetails.fullname,
@@ -885,117 +888,123 @@ export default {
 
         return "<ul>" + achv_f + "</ul>";
       };
-      console.log(
-        json2md([
-          {
-            h3: "Hi there!"
-          },
-          {
-            p:
-              "<a href=" +
-              userdetails.facebook +
-              " " +
-              '> <img align="left" src="https://img.icons8.com/color/48/000000/facebook.png"></img></a>'
-          },
-          {
-            p:
-              "<a href=" +
-              userdetails.linkdin +
-              " " +
-              '> <img align="left" src="https://img.icons8.com/color/48/000000/linkedin.png"></img></a>'
-          },
-          {
-            p:
-              "<a href=" +
-              userdetails.twitter +
-              " " +
-              '> <img align="left" src="https://img.icons8.com/color/48/000000/twitter.png"></img></a>'
-          },
-          {
-            p:
-              "<a href=" +
-              userdetails.github +
-              " " +
-              '> <img align="left" src="https://img.icons8.com/color/48/000000/github--v1.png"></img></a>'
-          },
-          {
-            p:
-              "<a href=" +
-              userdetails.instagram +
-              " " +
-              '> <img align="left" src="https://img.icons8.com/color/48/000000/instagram-new.png"></img></a>'
-          },
 
-          {
-            p:
-              "<a href=" +
-              userdetails.blog +
-              " " +
-              '> <img align="left" src="https://img.icons8.com/color/48/000000/medium-logo.png"></img></a>'
-          },
-          {
-            p:
-              "<a href=" +
-              userdetails.other +
-              " " +
-              '> <img align="left" src="https://img.icons8.com/color/48/000000/shrug-emoticon.png"></img></a>'
-          },
+      var details = json2md([
+        {
+          h3: "Hi there!"
+        },
+        {
+          p:
+            "<a href=" +
+            userdetails.facebook +
+            "<p>' '</p> " +
+            '> <img align="left" src="https://img.icons8.com/color/48/000000/facebook-new.png"></img></a>'
+        },
+        {
+          p:
+            "<a href=" +
+            userdetails.linkdin +
+            " " +
+            '> <img align="left" src="https://img.icons8.com/color/48/000000/linkedin.png"></img></a>'
+        },
+        {
+          p:
+            "<a href=" +
+            userdetails.twitter +
+            " " +
+            '> <img align="left" src="https://img.icons8.com/color/48/000000/twitter.png"></img></a>'
+        },
+        {
+          p:
+            "<a href=" +
+            userdetails.github +
+            " " +
+            '> <img align="left" src="https://img.icons8.com/color/48/000000/github--v1.png"></img></a>'
+        },
+        {
+          p:
+            "<a href=" +
+            userdetails.instagram +
+            " " +
+            '> <img align="left" src="https://img.icons8.com/color/48/000000/instagram-new.png"></img></a>'
+        },
 
-          { h4: "Let's Connect" },
+        {
+          p:
+            "<a href=" +
+            userdetails.blog +
+            " " +
+            '> <img align="left" src="https://img.icons8.com/color/48/000000/medium-monogram.png"></img></a>'
+        },
+        {
+          p:
+            "<a href=" +
+            userdetails.other +
+            " " +
+            '> <img align="left" src="https://img.icons8.com/color/48/000000/shrug-emoticon.png"></img></a>'
+        },
 
-          {
-            h4: "Name: " + userdetails.fullname
-          },
-          {
-            h4: "Position: " + userdetails.title
-          },
-          {
-            h4: "Email: " + userdetails.email
-          },
-          {
-            h4: "<h4>About Myself: " + userdetails.about + "</h4>"
-          },
+        { h4: "Let's Connect" },
 
-          {
-            ul: [
-              "<h1>Education</h1>",
-              [
-                "<h4>College Name: " +
-                  userdetails.education.college +
-                  "</h4>\n",
-                "<h4>Degree: " + userdetails.education.degree + "</h4>\n",
-                "<h4>From:" + userdetails.education.from + "</h4>\n",
-                "<h4>To: " + userdetails.education.to + "</h4>\n",
-                "<h4>About College: " + userdetails.education.about + "</h4>"
-              ]
+        {
+          h4: "Name: " + userdetails.fullname
+        },
+        {
+          h4: "Position: " + userdetails.title
+        },
+        {
+          h4: "Email: " + userdetails.email
+        },
+        {
+          h4: "<h4>About Myself: " + userdetails.about + "</h4>"
+        },
+
+        {
+          ul: [
+            "<h1>Education</h1>",
+            [
+              "<h4>College Name: " + userdetails.education.college + "</h4>\n",
+              "<h4>Degree: " + userdetails.education.degree + "</h4>\n",
+              "<h4>From:" + userdetails.education.from + "</h4>\n",
+              "<h4>To: " + userdetails.education.to + "</h4>\n",
+              "<h4>About College: " + userdetails.education.about + "</h4>"
             ]
-          },
-          {
-            h1: "Work Experience"
-          },
-          {
-            userdetails_works: ""
-          },
-          {
-            h1: "Projects"
-          },
-          {
-            userdetails_projects: ""
-          },
-          {
-            h1: "Skills"
-          },
-          {
-            userdetails_skills: ""
-          },
-          {
-            h1: "Achievements"
-          },
-          {
-            userdetails_achievements: ""
-          }
-        ])
-      );
+          ]
+        },
+        {
+          h1: "Work Experience"
+        },
+        {
+          userdetails_works: ""
+        },
+        {
+          h1: "Projects"
+        },
+        {
+          userdetails_projects: ""
+        },
+        {
+          h1: "Skills"
+        },
+        {
+          userdetails_skills: ""
+        },
+        {
+          h1: "Achievements"
+        },
+        {
+          userdetails_achievements: ""
+        }
+      ]);
+      console.log(details);
+
+      var filename = "README.md";
+
+      var blob = new Blob([details], {
+        type: "text/plain;charset=utf-8"
+      });
+
+      saveAs(blob, filename);
     },
     addNewProject() {
       this.userdetails.projects.push({
