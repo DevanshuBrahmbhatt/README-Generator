@@ -934,10 +934,11 @@ export default {
         {
           h4: "<h4>About Myself: " + userdetails.about + "</h4>"
         },
-
+        {
+          h1: "Education"
+        },
         {
           ul: [
-            "<h1>Education</h1>",
             [
               "<h4>College Name: " + userdetails.education.college + "</h4>\n",
               "<h4>Degree: " + userdetails.education.degree + "</h4>\n",
@@ -972,7 +973,7 @@ export default {
           userdetails_achievements: ""
         },
         {
-          link: { title: "Developed By Devanshu ♥️", source: "link" }
+          link: { title: "Developed By Devanshu ♥️", source: "gitread.md" }
         }
       ]);
       console.log(details);
