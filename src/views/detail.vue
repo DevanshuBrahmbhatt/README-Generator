@@ -85,21 +85,6 @@
             />
 
             <v-text-field
-              label="github"
-              v-model="userdetails.github"
-              placeholder="github link"
-              name="github"
-              type="text"
-              id="github"
-              style="color:#ffffff!important;"
-              background-color="#24292e"
-              outlined
-              color="#ffffff"
-              class="title"
-              dark
-            />
-
-            <v-text-field
               label="git Username "
               v-model="userdetails.gitusername"
               placeholder="github username"
@@ -715,7 +700,6 @@ export default {
         title: "",
         username: "",
         about: "",
-        github: "https://github.com/",
         linkedin: "http://linkedin.com/",
         facebook: "https://www.facebook.com/",
         instagram: "https://www.instagram.com/",
@@ -769,7 +753,6 @@ export default {
         title: this.userdetails.title,
         email: this.userdetails.email,
         about: this.userdetails.about,
-        github: this.userdetails.github,
         gitusername: this.userdetails.gitusername,
         linkedin: this.userdetails.linkedin,
         facebook: this.userdetails.facebook,
@@ -906,13 +889,7 @@ export default {
             " " +
             '> <img align="left" src="https://img.icons8.com/color/48/000000/twitter.png"></img></a>'
         },
-        {
-          p:
-            "<a href=" +
-            userdetails.github +
-            " " +
-            '> <img align="left" src="https://img.icons8.com/color/48/000000/github--v1.png"></img></a>'
-        },
+
         {
           p:
             "<a href=" +
@@ -995,7 +972,10 @@ export default {
             ")"
         },
         {
-          link: { title: "Developed By Devanshu ♥️", source: "gitread.me" }
+          link: {
+            title: "Developed By Devanshu ♥️",
+            source: "http://gitread.me/#/"
+          }
         }
       ]);
 
