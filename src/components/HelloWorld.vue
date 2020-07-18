@@ -57,7 +57,7 @@
         <v-col sm="12" lg="6">
           <div style="width:600 !important">
             <v-responsive :aspect-ratio="16/9">
-              <video class="responsive-video" max-width="400" height="400" controls autoplay>
+              <video class="responsive-video" max-width="400" height="400" controls autoplay loop>
                 <source src="../assets/Gitread.mp4" type="video/mp4" />
               </video>
             </v-responsive>
