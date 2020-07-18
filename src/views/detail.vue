@@ -673,7 +673,7 @@
               v-on:click="submitDetails"
               type="submit"
               large
-            >Generate Reamd.md</v-btn>
+            >Generate Readme.md</v-btn>
 
             <v-spacer />
           </v-col>

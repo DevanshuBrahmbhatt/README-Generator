@@ -9,7 +9,7 @@
           <div class="mb-4 text-justify">
             <h4
               style="line-height:1.3;"
-            >Github has launched a new feature. With the help of that feature, you'll have your own short bio on Github.So For that, you have to create a Repository of your username. Also, initialize with README.md.And then whatever you'll write on your README.md file that will appear as your Bio on Github. It's great for us to showcase who we are and what we did.</h4>
+            >Github has launched a new feature. With the help of that feature, you'll have your own short bio on Github. For that, you have to create a Repository of your username. Also, initialize with README.md. Then whatever you'll write on your README.md file that will appear as your Bio on Github. It's great for us to showcase who we are and what we did.</h4>
           </div>
         </v-row>
         <v-row class="white--text">
