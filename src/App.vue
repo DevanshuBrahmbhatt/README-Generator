@@ -9,7 +9,11 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn href="https://devanshubrahmbhatt.github.io/portfolio/" target="_blank" text>
+      <v-btn
+        href="https://devanshubrahmbhatt.github.io/portfolio/"
+        target="_blank"
+        text
+      >
         <span class="mr-2">About</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
@@ -26,7 +30,7 @@ export default {
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>
 <style lang="scss">
