@@ -5,7 +5,7 @@
         <div
           class="display-2 font-weight-medium"
           style="color:#ffffff!important;"
-        >Please add your details here</div>
+        >Please add your detail here</div>
         <v-divider class="mx-4" dark></v-divider>
         <v-divider class="mx-4" dark></v-divider>
         <v-divider class="mx-4" dark></v-divider>
